@@ -1,0 +1,4 @@
+
+1. yum install freetype-devel
+2. make clean
+3. make
