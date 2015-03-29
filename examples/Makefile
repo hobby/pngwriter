@@ -38,9 +38,12 @@
 
 include ../make.include
 
-EXAMPLES= pngtest lyapunov pngtest2
+EXAMPLES= lyapunov pnggraph
 
 all: $(EXAMPLES)
+
+pnggraph: pnggraph.cpp
+	$(CXX) $(CXXFLAGS) $(INC) pnggraph.cpp -o pnggraph $(LIBS) 
 
 pngtest: pngtest.cc
 	$(CXX) $(CXXFLAGS) $(INC) pngtest.cc -o pngtest $(LIBS) 
@@ -54,7 +57,7 @@ lyapunov: lyapunov.cc
 clean	:    
 	rm -f $(EXAMPLES) *~ arcoiris.png copiaburro.png one.png two.png
 	rm -f lyapunov.cc~ lyapunov.espaniol.cc~ Makefile~ pngtest.espaniol.cc~
-	rm -f .DS_Store out.png triangles.png
+	rm -f .DS_Store out.png triangles.png 800x260.png
 	
 	
 	
